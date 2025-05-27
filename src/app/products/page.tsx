@@ -11,7 +11,7 @@ interface Product {
 export default function ProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
 
-  useEffect(() => {
+  useEffect(() => { 
     fetch('https://rickandmortyapi.com/api/character')
       .then(res => res.json())
       .then(data => setProducts(data.results));
